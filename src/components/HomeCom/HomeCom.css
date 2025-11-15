@@ -87,7 +87,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: url("../../../public/Header.HEIC") center center/cover no-repeat;
+    background: url("../../../public/Header.jpg") center center/cover no-repeat;
 
 }
 /* Mini phones (up to 320px) */

@@ -2,52 +2,200 @@ import React, { useEffect, useState } from 'react';
 import './WorkCom.css';
 
 export const worksData = [
+    // Wedding
     {
+        category: "Wedding",
         title: "Ulugbek & Severa, 2025 May",
         photos: [
-            { src: "/public/works/U.jpg", alt: "Ulugbek & Severa 1" },
-            { src: "/public/works/U2.JPG", alt: "Ulugbek & Severa 2" },
-            { src: "/public/works/U3.JPG", alt: "Ulugbek & Severa 3" },
-            { src: "/public/works/U4.JPG", alt: "Ulugbek & Severa 4" },
-            { src: "/public/works/U5.JPG", alt: "Ulugbek & Severa 5" },
-            { src: "/public/works/U6.JPG", alt: "Ulugbek & Severa 6" },
+            { src: "/public/works/photo_21_2025-11-15_22-38-12.jpg", alt: "Ulugbek & Severa" },
+            { src: "/works/photo_22_2025-11-15_22-38-12.jpg", alt: "Ulugbek & Severa" },
+            { src: "/works/photo_23_2025-11-15_22-38-12.jpg", alt: "Ulugbek & Severa" },
+            { src: "/works/photo_24_2025-11-15_22-38-12.jpg", alt: "Ulugbek & Severa" },
+            { src: "/works/photo_25_2025-11-15_22-38-12.jpg", alt: "Ulugbek & Severa" },
+            { src: "/works/photo_26_2025-11-15_22-38-12.jpg", alt: "Ulugbek & Severa" },
         ],
     },
     {
+        category: "Wedding",
         title: "Zarifjon & Zuhra, 2025 July",
         photos: [
-            { src: "/public/works/R1.JPG", alt: "Zarifjon & Zuhra 1" },
-            { src: "/public/works/R2.JPG", alt: "Zarifjon & Zuhra 2" },
-            { src: "/public/works/R3.JPG", alt: "Zarifjon & Zuhra 3" },
-            { src: "/public/works/R4.JPG", alt: "Zarifjon & Zuhra 4" },
-            { src: "/public/works/R5.JPG", alt: "Zarifjon & Zuhra 5" },
+            { src: "/works/photo_16_2025-11-15_22-38-12.jpg", alt: "Zarifjon & Zuhra" },
+            { src: "/works/photo_17_2025-11-15_22-38-12.jpg", alt: "Zarifjon & Zuhra" },
+            { src: "/works/photo_18_2025-11-15_22-38-12.jpg", alt: "Zarifjon & Zuhra" },
+            { src: "/works/photo_19_2025-11-15_22-38-12.jpg", alt: "Zarifjon & Zuhra" },
+            { src: "/works/photo_20_2025-11-15_22-38-12.jpg", alt: "Zarifjon & Zuhra" },
+
         ],
     },
     {
+        category: "Wedding",
         title: "Asilbek & Rashida, 2025 August",
         photos: [
-            { src: "/public/works/A1.JPG", alt: "Asilbek & Rashida 1" },
-            { src: "/public/works/A2.JPG", alt: "Asilbek & Rashida 2" },
-            { src: "/public/works/A3.JPG", alt: "Asilbek & Rashida 3" },
-            { src: "/public/works/A4.JPG", alt: "Asilbek & Rashida 4" },
-            { src: "/public/works/A5.JPG", alt: "Asilbek & Rashida 5" },
-            { src: "/public/works/A6.JPG", alt: "Asilbek & Rashida 6" },
-            { src: "/public/works/A7.JPG", alt: "Asilbek & Rashida 7" },
-            { src: "/public/works/A8.JPG", alt: "Asilbek & Rashida 8" },
-            { src: "/public/works/A9.JPG", alt: "Asilbek & Rashida 9" },
-            { src: "/public/works/A10.JPG", alt: "Asilbek & Rashida 10" },
-            { src: "/public/works/A11.JPG", alt: "Asilbek & Rashida 11" },
-            { src: "/public/works/A12.JPG", alt: "Asilbek & Rashida 12" },
-            { src: "/public/works/A13.JPG", alt: "Asilbek & Rashida 13" },
-            { src: "/public/works/A14.JPG", alt: "Asilbek & Rashida 14" },
-            { src: "/public/works/A15.JPG", alt: "Asilbek & Rashida 15" },
+            { src: "/works/photo_1_2025-11-15_22-38-12.jpg", alt: "Asilbek & Rashida" },
+            { src: "/works/photo_2_2025-11-15_22-38-12.jpg", alt: "Asilbek & Rashida" },
+            { src: "/works/photo_3_2025-11-15_22-38-12.jpg", alt: "Asilbek & Rashida" },
+            { src: "/works/photo_4_2025-11-15_22-38-12.jpg", alt: "Asilbek & Rashida" },
+            { src: "/works/photo_5_2025-11-15_22-38-12.jpg", alt: "Asilbek & Rashida" },
+            { src: "/works/photo_6_2025-11-15_22-38-12.jpg", alt: "Asilbek & Rashida" },
+            { src: "/works/photo_7_2025-11-15_22-38-12.jpg", alt: "Asilbek & Rashida" },
+            { src: "/works/photo_8_2025-11-15_22-38-12.jpg", alt: "Asilbek & Rashida" },
+            { src: "/works/photo_10_2025-11-15_22-38-12.jpg", alt: "Asilbek & Rashida" },
+            { src: "/works/photo_11_2025-11-15_22-38-12.jpg", alt: "Asilbek & Rashida" },
+            { src: "/works/photo_12_2025-11-15_22-38-12.jpg", alt: "Asilbek & Rashida" },
+            { src: "/works/photo_13_2025-11-15_22-38-12.jpg", alt: "Asilbek & Rashida" },
+            { src: "/works/photo_14_2025-11-15_22-38-12.jpg", alt: "Asilbek & Rashida" },
+            { src: "/works/photo_15_2025-11-15_22-38-12.jpg", alt: "Asilbek & Rashida" },
+
+        ],
+    },
+
+    // Commercial
+    {
+        category: "Commercial",
+        title: "For brand Manisa, July 2025",
+        photos: [
+            { src: "/works/photo_1_2025-11-15_22-38-48.jpg", alt: "For brand Manisa" },
+            { src: "/works/photo_2_2025-11-15_22-38-48.jpg", alt: "For brand Manisa" },
+            { src: "/works/photo_3_2025-11-15_22-38-48.jpg", alt: "For brand Manisa" },
+            { src: "/works/photo_4_2025-11-15_22-38-48.jpg", alt: "For brand Manisa" },
+
+        ],
+    },
+    {
+        category: "Commercial",
+        title: "Meros Gallery Fashion Show, September 2025",
+        photos: [
+            { src: "/works/photo_5_2025-11-15_22-38-48.jpg", alt: "Meros Gallery Fashion Show" },
+            { src: "/works/photo_8_2025-11-15_22-38-48.jpg", alt: "Meros Gallery Fashion Show" },
+            { src: "/works/photo_10_2025-11-15_22-38-48.jpg", alt: "Meros Gallery Fashion Show" },
+            { src: "/works/photo_11_2025-11-15_22-38-48.jpg", alt: "Meros Gallery Fashion Show" },
+            { src: "/works/photo_12_2025-11-15_22-38-48.jpg", alt: "Meros Gallery Fashion Show" },
+
+        ],
+    },
+    {
+        category: "Commercial",
+        title: "For Volna Fitness Club, November 2025",
+        photos: [
+            { src: "/works/photo_6_2025-11-15_22-38-48.jpg", alt: "For Volna Fitness Club" },
+            { src: "/works/photo_7_2025-11-15_22-38-48.jpg", alt: "For Volna Fitness Club" },
+            { src: "/works/photo_9_2025-11-15_22-38-48.jpg", alt: "For Volna Fitness Club" },
+        ],
+    },
+
+    // Studio
+    {
+        category: "Studio",
+        title: "Shahzoda, June 2025",
+        photos: [
+            { src: "/works/photo_13_2025-11-15_22-38-48.jpg", alt: "Shahzoda" },
+            { src: "/works/photo_14_2025-11-15_22-38-48.jpg", alt: "Shahzoda" },
+            { src: "/works/photo_15_2025-11-15_22-38-48.jpg", alt: "Shahzoda" },
+            { src: "/works/photo_16_2025-11-15_22-38-48.jpg", alt: "Shahzoda" },
+            { src: "/works/photo_17_2025-11-15_22-38-48.jpg", alt: "Shahzoda" },
+        ],
+    },
+    {
+        category: "Studio",
+        title: "Madina, June 2025",
+        photos: [
+            { src: "/works/photo_18_2025-11-15_22-38-48.jpg", alt: "Madina" },
+            { src: "/works/photo_19_2025-11-15_22-38-48.jpg", alt: "Madina" },
+            { src: "/works/photo_20_2025-11-15_22-38-48.jpg", alt: "Madina" },
+        ],
+    },
+    {
+        category: "Studio",
+        title: "Dilshoda, April 2025",
+        photos: [
+            { src: "/works/photo_39_2025-11-15_22-38-48.jpg", alt: "Dilshoda" },
+
+        ],
+    },
+    {
+        category: "Studio",
+        title: "Sabina, October 2025",
+        photos: [
+            { src: "/works/photo_40_2025-11-15_22-38-48.jpg", alt: "Sabina" },
+            { src: "/works/photo_41_2025-11-15_22-38-48.jpg", alt: "Sabina" },
+            { src: "/works/photo_42_2025-11-15_22-38-48.jpg", alt: "Sabina" },
+
+        ],
+    },
+
+    // Street Shoot
+    {
+        category: "Street Shoot",
+        title: "Mavluda, July 2025",
+        photos: [
+            { src: "/works/photo_21_2025-11-15_22-38-48.jpg", alt: "Mavluda" },
+            { src: "/works/photo_22_2025-11-15_22-38-48.jpg", alt: "Mavluda" },
+
+        ],
+    },
+    {
+        category: "Street Shoot",
+        title: "Mohina, August 2025",
+        photos: [
+            { src: "/works/photo_23_2025-11-15_22-38-48.jpg", alt: "Mohina" },
+            { src: "/works/photo_24_2025-11-15_22-38-48.jpg", alt: "Mohina" },
+            { src: "/works/photo_25_2025-11-15_22-38-48.jpg", alt: "Mohina" },
+            { src: "/works/photo_26_2025-11-15_22-38-48.jpg", alt: "Mohina" },
+
+        ],
+    },
+    {
+        category: "Street Shoot",
+        title: "Sabina, September 2025",
+        photos: [
+            { src: "/works/photo_27_2025-11-15_22-38-48.jpg", alt: "Sabina" },
+            { src: "/works/photo_28_2025-11-15_22-38-48.jpg", alt: "Sabina" },
+            { src: "/works/photo_29_2025-11-15_22-38-48.jpg", alt: "Sabina" },
+        ],
+    },
+    {
+        category: "Street Shoot",
+        title: "Shohsanam, October 2025",
+        photos: [
+            { src: "/works/photo_30_2025-11-15_22-38-48.jpg", alt: "Shohsanam" },
+            { src: "/works/photo_31_2025-11-15_22-38-48.jpg", alt: "Shohsanam" },
+            { src: "/works/photo_32_2025-11-15_22-38-48.jpg", alt: "Shohsanam" },
+
+        ],
+    },
+    {
+        category: "Street Shoot",
+        title: "Sabina, June 2025",
+        photos: [
+            { src: "/works/photo_34_2025-11-15_22-38-48.jpg", alt: "Sabina" },
+
+        ],
+    },
+    {
+        category: "Street Shoot",
+        title: "Dilshoda, August 2025",
+        photos: [
+            { src: "/works/photo_36_2025-11-15_22-38-48.jpg", alt: "Dilshoda" },
+            { src: "/works/photo_37_2025-11-15_22-38-48.jpg", alt: "Dilshoda" },
+
+        ],
+    },
+    {
+        category: "Street Shoot",
+        title: "Marjona, November 2025",
+        photos: [
+            { src: "/works/photo_38_2025-11-15_22-38-48.jpg", alt: "Marjona" },
+
         ],
     },
 ];
 
+
 const WorkCom = ({ works }) => {
-    const data = works || worksData; // use passed works or full worksData
+    const data = works || worksData;
     const [visibleItems, setVisibleItems] = useState([]);
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [currentPhoto, setCurrentPhoto] = useState(null);
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -59,18 +207,29 @@ const WorkCom = ({ works }) => {
         return () => clearTimeout(timeout);
     }, [data]);
 
+    const openLightbox = (photo) => {
+        setCurrentPhoto(photo);
+        setLightboxOpen(true);
+    };
+
+    const closeLightbox = () => {
+        setLightboxOpen(false);
+        setCurrentPhoto(null);
+    };
+
     return (
         <div className="gallery-wrapper">
             {data.map((work, wIndex) => (
                 <div key={wIndex} className="work-item">
+                    <h3 className="work-category">{work.category}</h3>
                     <h2 className="work-title">{work.title}</h2>
                     <div className="gallery">
                         {work.photos.map((photo, pIndex) => (
                             <div
                                 key={pIndex}
-                                className={`gallery-item ${
-                                    visibleItems.includes(pIndex) ? "visible" : ""
-                                }`}
+                                className={`gallery-item ${visibleItems.includes(pIndex) ? "visible" : ""}`}
+                                onClick={() => openLightbox(photo)}
+                                style={{ cursor: 'pointer' }}
                             >
                                 <img src={photo.src} alt={photo.alt} />
                             </div>
@@ -78,6 +237,19 @@ const WorkCom = ({ works }) => {
                     </div>
                 </div>
             ))}
+
+            {/* Lightbox */}
+            {lightboxOpen && currentPhoto && (
+                <div className="lightbox" onClick={closeLightbox}>
+                    <span className="lightbox-close">&times;</span>
+                    <img
+                        src={currentPhoto.src}
+                        alt={currentPhoto.alt}
+                        className="lightbox-img"
+                        onClick={(e) => e.stopPropagation()} // prevent closing when clicking on image
+                    />
+                </div>
+            )}
         </div>
     );
 };

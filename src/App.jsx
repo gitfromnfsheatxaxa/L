@@ -10,6 +10,7 @@ import NotFound from "./Pages/404/NotFound.jsx";
 import FooterCom from "./components/FooterCom/FooterCom.jsx";
 import Resume from "./Pages/resume/resume.jsx";
 import Works from "./Pages/work/work.jsx";
+import Reflection from "./Pages/reflection/Reflection.jsx";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
                     <Route path="/about" element={<About/>}/>
                     <Route path="/resume" element={<Resume/>}/>
                     <Route path="/works" element={<Works/>}/>
+                    <Route path="/reflection" element={<Reflection/>}/>
                     <Route path="*" element={<NotFound/>}/>
                     <Route path="*" element={<Link to="/"/>}/> </Routes>
 

@@ -108,9 +108,9 @@ I am passionate about bringing creative ideas to life through photography and po
                         <ul className="book-list">
                             <li><strong>Photography:</strong> Portraits, lifestyle, commercial.
                             </li>
-                            <li><strong>Editing:</strong> dobe Lightroom (4 years)
+                            <li><strong>Editing:</strong> Adobe Lightroom (4 years)
                             </li>
-                            <li><strong>Photoshop:</strong> Photoshop (1 year)
+                            <li><strong>Photoshop:</strong> Adobe Photoshop (1 year)
                             </li>
                             <li><strong>Post-production:</strong> Color grading, retouching, compositing
                             </li>

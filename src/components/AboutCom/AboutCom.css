@@ -45,7 +45,7 @@
     background: var(--backround-color);
     border-radius: 4px;
     padding: 5rem 3.5rem;
-    min-height: 65vh;
+    min-height: 50vh;
     font-family: "Cormorant Garamond", serif;
     color: var(--color-title);
     line-height: 1.7;

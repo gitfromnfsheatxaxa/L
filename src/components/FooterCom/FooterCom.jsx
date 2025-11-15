@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './FooterCom.css';
+import { FaTelegram, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 const FooterCom = () => {
     return (
@@ -16,29 +16,19 @@ const FooterCom = () => {
                         <p>Email: lobarzabbarova@gmail.com</p>
                         <p>Location: Tashkent, Shaykhontoxur</p>
                     </div>
-                </div>
 
-                {/* Navigation Links */}
-                <div className="footer-links">
-                    <div className="links-section">
-                        <h3>Navigation</h3>
-                        <ul>
-                            <li><Link className="nav-link" to="/">Home</Link></li>
-                            <li><Link className="nav-link" to="/about">About</Link></li>
-                            <li><Link className="nav-link" to="/works">Works</Link></li>
-                            <li><Link className="nav-link" to="/resume">Resume</Link></li>
-                        </ul>
-                    </div>
+                    {/* Social Media Links */}
+                    <div className="footer-socials">
+                        <a href="https://t.me/medelame" target="_blank" rel="noopener noreferrer">
+                            <FaTelegram />
+                        </a>
+                        <a href="mailto:lobarzabbarova@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <FaEnvelope />
+                        </a>
 
-                    <div className="links-section">
-                        <h3>Skills & Services</h3>
-                        <ul>
-                            <li>Teamwork & Leadership</li>
-                            <li>Time Management</li>
-                            <li>Creative Photography</li>
-                            <li>Photo Editing (Photoshop)</li>
-                            <li>Illustration & Drawing</li>
-                        </ul>
+                        <a href="https://instagram.com/lobarsdiary" target="_blank" rel="noopener noreferrer">
+                            <FaInstagram />
+                        </a>
                     </div>
                 </div>
             </div>
