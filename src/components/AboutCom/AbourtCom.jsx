@@ -54,8 +54,7 @@ const AboutCom = () => {
                         <DenseFlowerCluster positionClass="bottom-left"/>
                         <DenseFlowerCluster positionClass="top-right"/>
                         <DenseFlowerCluster positionClass="bottom-right"/>
-
-                        <h1 className="main-heading">About me</h1>
+                        <h2 className="book-subtitle">About me</h2>
 
                         <div className="book-text">
                             <span className="drop-cap-container">
