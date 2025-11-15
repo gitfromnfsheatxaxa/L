@@ -7,7 +7,7 @@ export const worksData = [
         category: "Wedding",
         title: "Ulugbek & Severa, 2025 May",
         photos: [
-            { src: "/public/works/photo_21_2025-11-15_22-38-12.jpg", alt: "Ulugbek & Severa" },
+            { src: "/works/photo_21_2025-11-15_22-38-12.jpg", alt: "Ulugbek & Severa" },
             { src: "/works/photo_22_2025-11-15_22-38-12.jpg", alt: "Ulugbek & Severa" },
             { src: "/works/photo_23_2025-11-15_22-38-12.jpg", alt: "Ulugbek & Severa" },
             { src: "/works/photo_24_2025-11-15_22-38-12.jpg", alt: "Ulugbek & Severa" },
