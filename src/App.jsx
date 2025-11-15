@@ -8,10 +8,11 @@ import About from "./Pages/about/About.jsx";
 import Home from "./Pages/home/Home.jsx";
 import NotFound from "./Pages/404/NotFound.jsx";
 import FooterCom from "./components/FooterCom/FooterCom.jsx";
+import Resume from "./Pages/resume/resume.jsx";
+import Works from "./Pages/work/work.jsx";
 
 
 function App() {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     return (
         <div className="app">
@@ -21,11 +22,12 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/about" element={<About/>}/>
+                    <Route path="/resume" element={<Resume/>}/>
+                    <Route path="/works" element={<Works/>}/>
                     <Route path="*" element={<NotFound/>}/>
                     <Route path="*" element={<Link to="/"/>}/> </Routes>
 
             </main>
-            <br/>  <br/>   <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/> <br/>  <br/>  <br/>  <br/>  <br/>  <br/>
         <FooterCom/>
         </div>
     );

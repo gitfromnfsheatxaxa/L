@@ -67,11 +67,7 @@ I'm Lobar
 Professional photographer and photo editor based in Tashkent, Uzbekistan.
 I specialize in creating visually compelling images and edits, with a strong focus on both aesthetic quality and storytelling.                            </span>
                         </div>
-                        <p className="book-text">
-                            My journey began with a simple curiosity and a modest camera, yet it evolved into a lifelong
-                            dedication to the craft of visual storytelling. Each project is a new chapter, written with
-                            light, shadow, and intention, reflecting both artistry and authenticity.
-                        </p>
+
                     </div>
                 </SwiperSlide>
 
@@ -95,11 +91,7 @@ I specialize in creating visually compelling images and edits, with a strong foc
 Worked with a variety of clients including influencers, brands, and commercial projects.
 I am passionate about bringing creative ideas to life through photography and post-production and am always open to collaboration. If you have a concept or project in mind, feel free to reach out — I’d love to work with you!                            </span>
                         </p>
-                        <p className="book-text">
-                            These experiences have allowed me to cultivate a versatile portfolio, blending vibrant
-                            lifestyle imagery with meticulously crafted commercial work, all unified by a pursuit of
-                            beauty, authenticity, and narrative depth.
-                        </p>
+
                     </div>
                 </SwiperSlide>
 
@@ -114,17 +106,13 @@ I am passionate about bringing creative ideas to life through photography and po
 
                         <h2 className="book-subtitle">Technical Skills</h2>
                         <ul className="book-list">
-                            <li><strong>Photography Disciplines:</strong> Portraits, lifestyle, commercial, and
-                                editorial projects, each executed with thoughtful composition and creative vision.
+                            <li><strong>Photography:</strong> Portraits, lifestyle, commercial.
                             </li>
-                            <li><strong>Editing Mastery (Adobe Lightroom):</strong> Four years of experience in tonal
-                                refinement, color grading, and creating cohesive visual narratives.
+                            <li><strong>Editing:</strong> dobe Lightroom (4 years)
                             </li>
-                            <li><strong>Digital Artistry (Photoshop):</strong> Skillful retouching, compositing, and
-                                manipulation to achieve polished and compelling visuals.
+                            <li><strong>Photoshop:</strong> Photoshop (1 year)
                             </li>
-                            <li><strong>Post-production Expertise:</strong> Advanced techniques in color correction,
-                                detailed retouching, and seamless image enhancement.
+                            <li><strong>Post-production:</strong> Color grading, retouching, compositing
                             </li>
                         </ul>
                     </div>
@@ -141,14 +129,11 @@ I am passionate about bringing creative ideas to life through photography and po
 
                         <h2 className="book-subtitle">Soft Skills</h2>
                         <ul className="book-list">
-                            <li><strong>Creative Vision:</strong> An attentive eye for composition and storytelling,
-                                ensuring each image conveys depth and emotion.
+                            <li><strong>Creative Vision:</strong> Creative vision and attention to detail
                             </li>
-                            <li><strong>Communication:</strong> Strong collaborative skills to interpret and realize
-                                client visions with precision and care.
+                            <li><strong>Communication:</strong> Strong communication and collaboration with clients
                             </li>
-                            <li><strong>Efficiency:</strong> Effective project management and adherence to deadlines,
-                                balancing speed with uncompromised quality.
+                            <li><strong>Efficiency:</strong> Project management and time efficiency
                             </li>
                         </ul>
                     </div>

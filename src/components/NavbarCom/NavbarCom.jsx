@@ -36,10 +36,10 @@ const NavbarCom = () => {
                             <Link className="nav-link" to="/about" onClick={closeMobileMenu}>About</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/trucks" onClick={closeMobileMenu}>Works</Link>
+                            <Link className="nav-link" to="/works" onClick={closeMobileMenu}>Works</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/socials" onClick={closeMobileMenu}>Socials</Link>
+                            <Link className="nav-link" to="/resume" onClick={closeMobileMenu}>Resume</Link>
                         </li>
                     </ul>
                     <div className="nav-actions">

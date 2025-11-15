@@ -1,49 +1,53 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './FooterCom.css';
 
-const Footer = () => {
+const FooterCom = () => {
     return (
-        <footer>
-            <div className="footer">
-                <div className="footer-left">
-                    <h2 className="footer-logo">MO GLOBE TRUCKING</h2>
+        <footer className="footer">
+            <div className="footer-container">
+                {/* Brand / Personal Info */}
+                <div className="footer-brand">
+                    <h2 className="footer-logo">LOBAR JABBOROVA</h2>
                     <p className="footer-description">
-                        Streamlining Your Supply Chain, One Shipment at a Time
+                        Media Student | Photographer & Illustrator | Creative Professional
                     </p>
                     <div className="footer-contact">
-                        <p>Email: info@moglobetrucking.com</p>
-                        <p>Call Us: (512) 787-0305</p>
-                        <p>Address: 5203 Golden Gate Dr Killeen, TX 76549</p>
+                        <p>Email: lobarzabbarova@gmail.com</p>
+                        <p>Location: Tashkent, Shaykhontoxur</p>
                     </div>
                 </div>
 
+                {/* Navigation Links */}
                 <div className="footer-links">
                     <div className="links-section">
-                        <h3>Pages</h3>
+                        <h3>Navigation</h3>
                         <ul>
-                            <li><a href="/about">About Us</a></li>
-                            <li><a href="/job">Job</a></li>
-                            <li><a href="/trucks">Pricing</a></li>
-                            <li><a href="/services">Services</a></li>
-                            <li><a href="/privacy">Privacy</a></li>
-                            <li><a href="/contact">Contact</a></li>
+                            <li><Link className="nav-link" to="/">Home</Link></li>
+                            <li><Link className="nav-link" to="/about">About</Link></li>
+                            <li><Link className="nav-link" to="/works">Works</Link></li>
+                            <li><Link className="nav-link" to="/resume">Resume</Link></li>
                         </ul>
                     </div>
 
                     <div className="links-section">
-                        <h3>Services</h3>
+                        <h3>Skills & Services</h3>
                         <ul>
-                            <li><a href="/services">Turnkey Services</a></li>
-                            <li><a href="/services">Fleet Services</a></li>
-                            <li><a href="/services">Accounting Services</a></li>
-                            <li><a href="/services">Safety Services</a></li>
-                            <li><a href="/services">Dispatch</a></li>
+                            <li>Teamwork & Leadership</li>
+                            <li>Time Management</li>
+                            <li>Creative Photography</li>
+                            <li>Photo Editing (Photoshop)</li>
+                            <li>Illustration & Drawing</li>
                         </ul>
                     </div>
                 </div>
+            </div>
+
+            <div className="footer-bottom">
+                <p>© {new Date().getFullYear()} LOBAR JABBOROVA.</p>
             </div>
         </footer>
     );
 };
 
-export default Footer;
+export default FooterCom;
