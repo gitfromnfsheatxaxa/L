@@ -42,6 +42,7 @@
     aspect-ratio: 1 / 1; /* square */
     overflow: hidden;
     opacity: 0;
+    object-fit: contain;
     transform: translateY(40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
