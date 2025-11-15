@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { faAlignJustify, faAlignRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './NavbarCom.css'; // Import the CSS file
-import Logo from '/public/logo-for-website.svg';
+import Logo from '/public/LL.png';
 const NavbarCom = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -23,7 +23,6 @@ const NavbarCom = () => {
                 <nav className="nav">
                     <Link className="Logo" to="/">
                         <img src={Logo} alt="Logo" className="logo-image" />
-
                     </Link>
                     <ul className={`nav-list ${mobileMenuOpen ? 'open' : ''}`}>
                         <li className="nav-item">
@@ -32,18 +31,11 @@ const NavbarCom = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/about" onClick={closeMobileMenu}>About</Link>
                         </li>
-
                         <li className="nav-item">
-                            <Link className="nav-link" to="/trucks" onClick={closeMobileMenu}>Trucks</Link>
+                            <Link className="nav-link" to="/trucks" onClick={closeMobileMenu}>Works</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/services" onClick={closeMobileMenu}>Services</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/contact" onClick={closeMobileMenu}>Contact</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/apply" onClick={closeMobileMenu}>Apply Now</Link>
+                            <Link className="nav-link" to="/socials" onClick={closeMobileMenu}>Socials</Link>
                         </li>
                     </ul>
                     <div className="nav-actions">

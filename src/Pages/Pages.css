@@ -1,144 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap');
+
 :root {
-    --color-primary: #FFBE34; /* Title */
-    --color-accent-dark: rgb(105, 105, 105); /* backround*/
-    --color-accent-light: #001F3F; /* backround*/
-    --color-accent: #f4f4f4; /* Paragraph Font Color */
-    --color-highlight: #f9f9f9; /* Heading Font Color */
+    --color-accent-dark: rgb(105, 105, 105);
+    --color-1: #B7C9A3;
+    --color-1-light: #D4E1C3;
+    --color-1-dark: #98AD82;
+    --color-2: #8A6B4E;
+    --color-2-light: #B4997C;
+    --color-2-dark: #624D38;
+    --color-title: #2F1E15;
+    --backround-color: #F4EDE3;
+    --backround-color-hover: #E4D8C7;
 }
 
-/* Contacts Page */
-.contacts-container {
-    width: 100% ;
-        /*background-color: var(--color-accent-dark); !* Using primary color *!*/
-}
-
-.contacts-heading {
-    font-size: 2rem;
-    color: var(--color-primary); /* Using accent dark color */
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.contacts-description {
-    font-size: 1.2rem;
-    color: var(--color-accent); /* Using accent color */
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Job Page */
-.job-container {
-    margin-top: 2rem;
-    background-color: var(--color-highlight); /* Using accent dark color */
-    /*background-color: rgba(10, 24, 56, 0.9);*/
-    padding: 3rem 2rem;
-    text-align: center;
-}
-
-.job-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--color-primary); /* Using highlight color */
-    margin-bottom: 1.5rem;
-}
-
-.job-description {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: var(--color-accent-dark) !important; /* Keeping white for text */
-    max-width: 700px; /* Max width for readability */
-    margin: 0 auto 2.5rem auto; /* Centered with margin below */
-}
-
-/* Responsive styles for Job Page */
-
-/* Footer styles */
-footer {
-    background-color: var(--color-accent-dark); /* Using accent dark color */
-    color: #F4F4F4; /* Light text */
-    padding: 1rem;
-    text-align: center;
-    font-size: 0.9rem; /* Slightly smaller font */
-}
-
-
-
-.not-found-container {
+.about-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 100vh; /* Full viewport height */
-    background-color: #ffffff; /* White background */
+    padding: 3rem 0;
+    background: var(--backround-color-hover);
+}
+
+.book-swiper {
+    width: 90%;
+    max-width: 700px;
+}
+
+.book-page {
+    background: var(--backround-color);
+    border-radius: 12px;
+    padding: 3rem 2rem 3rem 5rem; /* more space for foliage */
+    min-height: 80vh;
+    width: 50%;
+    font-family: "Cormorant Garamond", serif;
+    color: var(--color-2);
+    line-height: 1.8;
+    position: relative;
+    box-shadow: 0 0 25px rgba(0,0,0,0.12);
+    overflow: hidden;
+}
+
+.decorative-margin {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    z-index: 1;
+    background: red;
+    border-right: 2px solid var(--color-2-dark);
+}
+
+/* Dense foliage using multiple pseudo-elements */
+.decorative-margin::before,
+.decorative-margin::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:
+            radial-gradient(circle 2px, var(--color-1-dark) 100%, transparent 0),
+            radial-gradient(circle 3px, var(--color-2-dark) 100%, transparent 0),
+            radial-gradient(circle 1.5px, var(--color-1) 100%, transparent 0),
+            radial-gradient(circle 2px, var(--color-2-light) 100%, transparent 0);
+    background-repeat: repeat;
+    background-position:
+            5px 10px,
+            10px 25px,
+            15px 5px,
+            20px 15px;
+    background-size: 25px 25px;
+}
+
+.book-title {
+    font-size: 2.6rem;
     text-align: center;
-    color: var(--color-accent-dark);
+    margin-bottom: 1.5rem;
+    font-style: normal;
+    color: var(--color-title);
+    z-index: 2;
+    position: relative;
 }
 
-.not-found-heading {
-    display: flex;
-    font-size: 8rem; /* Large heading */
+.book-subtitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-title);
+    z-index: 2;
+    position: relative;
+}
+
+.book-text {
+    font-size: 1.4rem;
+    font-style: italic;
+    text-indent: 1.2em;
+    margin-bottom: 1rem;
+}
+
+.drop-cap {
+    float: left;
+    font-size: 4rem;
     font-weight: bold;
-    color: var(--color-accent-dark);
-    margin: 0; /* Remove default margin */
-}
-.not-found-heading-0{
-    color: var(--color-primary);    display: flex;
-    font-size: 8rem; /* Large heading */
-    font-weight: bold;
-    margin: 0; /* Remove default margin */
-
-}
-.not-found-subheading {
-    font-size: 1.5rem;
-    color: var(--color-accent-dark);
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-weight: bold;
+    color: var(--color-2-dark);
+    line-height: 1;
+    margin-right: 0.3em;
+    font-family: "Cormorant Garamond", serif;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
-.not-found-description {
-    font-size: 1rem;
-    color: var(--color-accent-dark);
-    margin-bottom: 30px;
+.book-list {
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+    font-style: italic;
 }
 
-.go-home-button {
-    padding: 12px 24px;
-    font-size: 1rem;
-    color: #ffffff;
-    background-color: var(--color-primary);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
+.book-list li {
+    margin-bottom: 0.4rem;
 }
 
-.go-home-button:hover {
-    background-color: var(--color-accent-dark);
-    color: var(--color-primary);
+.swiper-pagination-bullet {
+    background: var(--color-2-light);
+    opacity: 0.4;
 }
 
-.about-home{
-    margin-top:90vh;
+.swiper-pagination-bullet-active {
+    background: var(--color-title);
+    opacity: 1;
+    scale: 1.2;
 }
-.service-page{
-    background-color: var(--color-highlight);
-}
-@media (max-width: 768px) {
-    .contacts-container,.job-container {
-        width: 100%;
-    }
-    .job-container {
-        padding: 2rem 1rem; /* Less padding on smaller screens */
-    }
 
-    .job-heading {
-        font-size: 2rem; /* Smaller heading size */
-    }
-
-    .job-description {
-        font-size: 1rem; /* Smaller description size */
-        padding: 0 1rem; /* Padding for smaller screens */
-    }
+.swiper-button-next,
+.swiper-button-prev {
+    display: none !important;
 }

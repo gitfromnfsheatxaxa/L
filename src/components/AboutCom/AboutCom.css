@@ -1,103 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@0;1&display=swap');
+
+/* --- Custom Color Variables (User Defined) --- */
+:root {
+    --color-accent-dark: rgb(105, 105, 105);
+    --color-1-: #B7C9A3; /* Light Green */
+    --color-1-light: #D4E1C3; /* Very Light Green */
+    --color-1-dark: #98AD82; /* Darker Green */
+    --color-2: #8A6B4E; /* Earthy Brown/Tan */
+    --color-2-light: #B4997C; /* Light Brown/Tan */
+    --color-2-dark: #624D38; /* Dark Brown */
+    --color-title: #2F1E15; /* Very Dark Brown/Text */
+    --backround-color: #F4EDE3; /* Page Background */
+    --backround-color-hover: #E4D8C7;
+    --rubric-color: #991f1f; /* Red for emphasis/rubrics */
+}
+
+/* --- General Container and Swiper Setup --- */
 .about-container {
-    width: 87%;
-    margin: 5rem auto;
-    padding: 20px;
-    background: var(--color-accent);
-    border-radius: 8px;
-}
-
-.about-heading {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--color-primary);
-}
-
-.cards-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.card {
+    margin: 1rem auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--color-accent);
-    padding: 20px;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.card-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    justify-content: space-between;
-
-}
-
-.card-content.left {
-    flex-direction: row;
-}
-
-.card-content.right {
-    flex-direction: row-reverse;
-}
-
-.card-image {
-    width: 45%;
-}
-
-.card-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.card-text {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     justify-content: center;
-    width: 45%;
-    color: var(--color-accent-dark);
+    padding: 3rem 0;
+    background: var(--backround-color-hover);
+    width: 100%;
+    overflow-x: hidden;
+
+}
+
+.book-swiper {
+    width: 95%;
+    max-width: 800px;
+    /* Ensure Swiper elements respect the 3D perspective */
+    perspective: 1500px;
+    overflow: visible; /* Allows the shadow/turn effect to be visible */
+    /* Swiper custom properties for pagination */
+    --swiper-pagination-color: var(--color-title);
+    --swiper-pagination-bullet-inactive-opacity: 0.6;
+    --swiper-pagination-bullet-size: 10px;
+}
+
+/* --- The Book Page Style --- */
+.book-page {
+    background: var(--backround-color);
+    border-radius: 4px;
+
+    padding: 2.5rem 3.5rem;
+    min-height: 80vh;
+    font-family: "Cormorant Garamond", serif;
+    color: var(--color-title);
+    line-height: 1.7;
+    position: relative;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--color-2-light);
+    overflow: hidden;
+}
+
+/* --- The Ornate Border Effect (Simplified Gold/Brown Frame) --- */
+.page-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 15;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><defs><linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="%23B4997C"/><stop offset="50%" stop-color="%238A6B4E"/><stop offset="100%" stop-color="%23B4997C"/></linearGradient></defs><rect x="2" y="2" width="96" height="96" fill="none" stroke="%23624D38" stroke-width="0.6"/><rect x="3" y="3" width="94" height="94" fill="none" stroke="%2398AD82" stroke-width="0.3"/><rect x="0" y="0" width="100" height="100" fill="none" stroke="url(%23gold)" stroke-width="1.5"/></svg>');
+}
+
+/* --- PURE CSS FLOWER DECORATION (Dense Foliage) --- */
+
+/* Base element for a single flower/foliage unit */
+.pure-css-flower {
+    position: absolute;
+    width: 30px; /* Slightly larger base */
+    height: 30px;
+    background: var(--color-2-dark); /* Small dark center/bud */
+    border-radius: 50%;
+    z-index: 5;
+    transform-origin: center;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Leaf 1 (Dark Green) - using ::before */
+.pure-css-flower::before {
+    content: '';
+    position: absolute;
+    width: 25px; /* Larger leaves */
+    height: 40px;
+    background: var(--color-1-dark);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    left: -12px; /* Adjusted position */
+    top: 5px;
+    transform: rotate(-45deg);
+    border: 1px solid var(--color-2);
+    z-index: 1;
+}
+/* Leaf 2 (Light Green) - using ::after */
+.pure-css-flower::after {
+    content: '';
+    position: absolute;
+    width: 25px; /* Larger leaves */
+    height: 40px;
+    background: var(--color-1-light);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    right: -12px; /* Adjusted position */
+    top: 5px;
+    transform: rotate(45deg);
+    border: 1px solid var(--color-2);
+    z-index: 1;
+}
+
+/* Container for multiple flowers to create density in the corner */
+.book-page .corner-decor-container {
+    position: absolute;
+    width: 180px; /* Larger area for more density */
+    height: 180px;
+    z-index: 20;
+    pointer-events: none;
+    overflow: hidden; /* Keep flowers within bounds of this container */
+}
+
+/* Placement of individual flowers within the container for a dense, varied look */
+.corner-decor-container .flower-1 {
+    top: 5px;
+    left: 10px;
+    transform: scale(1.5) rotate(15deg);
+}
+.corner-decor-container .flower-2 {
+    top: 35px;
+    left: 60px;
+    transform: scale(1) rotate(180deg);
+}
+.corner-decor-container .flower-3 {
+    top: 15px;
+    left: 110px;
+    transform: scale(1.2) rotate(270deg);
+}
+.corner-decor-container .flower-4 {
+    top: 70px;
+    left: 20px;
+    transform: scale(0.9) rotate(45deg);
+}
+.corner-decor-container .flower-5 {
+    top: 85px;
+    left: 90px;
+    transform: scale(1.1) rotate(220deg);
+}
+
+/* Container Positioning (Rotate the whole cluster based on corner) */
+.corner-decor-container.top-left { top: -40px; left: -40px; }
+.corner-decor-container.bottom-left { bottom: -40px; left: -40px; transform: rotate(270deg); }
+.corner-decor-container.top-right { top: -40px; right: -40px; transform: rotate(90deg); }
+.corner-decor-container.bottom-right { bottom: -40px; right: -40px; transform: rotate(180deg); }
+
+
+/* --- Typography Styles --- */
+.book-title {
     font-size: 1.2rem;
-    line-height: 1.6;
-    white-space: pre-line;
-}
-
-.card-title {
-    margin-bottom: 4rem;
-    font-size: 2.6rem;
-    color: var(--color-primary);
-    margin-top: 1rem;
+    font-family: "Cormorant Garamond", serif;
+    color: var(--color-2-dark);
+    font-weight: 700;
     text-align: center;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
-    .about-container{
-        width: 100%;
-        padding: 10px;
-    }
-    .card-content {
-        width: 100%;
-        display: flex;
-        flex-direction: column !important;
+.main-heading {
+    font-family: "Old Standard TT", serif;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: var(--color-title);
+    font-weight: 400;
+    position: relative;
+}
+
+.book-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-2-dark);
+    font-weight: 500;
+    border-bottom: 1px solid var(--color-2-light);
+    padding-bottom: 0.3rem;
+    margin-top: 2rem;
+}
+
+.book-text {
+    font-size: 1.35rem;
+    font-style: italic;
+    text-indent: 0;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Illuminated Letter/Drop Cap --- */
+.drop-cap-container {
+    margin-right: 0.6em;
+    float: left;
+    padding: 0.1rem 0.2rem 0.1rem 0.1rem;
+    background: transparent;
+}
+
+.drop-cap {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 0.8;
+    color: var(--color-2-dark);
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    /* Gold/Brown Gradient for Illumination */
+    background: linear-gradient(135deg, var(--color-2) 0%, var(--color-2-light) 40%, var(--color-2-light) 60%, var(--color-2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.initial-ornament {
+    display: inline-block;
+    padding: 0.2rem;
+    border: 3px solid var(--color-2-dark);
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    /* Dark Green/Brown background for the letter */
+    background-image: radial-gradient(circle at 70% 30%, var(--color-1-dark) 10%, var(--color-2-dark) 40%, var(--color-2-dark) 70%);
+}
+
+.initial-ornament .drop-cap {
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: var(--backround-color); /* Light letter against dark background */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.text-after-drop-cap {
+    display: block;
+    overflow: hidden;
+}
+
+/* --- List Styles --- */
+.book-list {
+    margin-left: 2rem;
+    padding-left: 0;
+    list-style: none;
+    font-size: 1.3rem;
+    font-style: italic;
+
+}
+
+.book-list li {
+    margin-bottom: 0.7rem;
+    position: relative;
+    padding-left: 1.5rem;
+
+}
+
+.book-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: var(--color-2-dark);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* --- Swiper Navigation/Pagination --- */
+/* The Swiper custom properties in .book-swiper handle the colors now */
+.swiper-pagination-bullet {
+    background: var(--swiper-pagination-color);
+    opacity: var(--swiper-pagination-bullet-inactive-opacity);
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    scale: 1.3;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: none !important;
+}
+
+.book-page > *:not(.page-border):not(.corner-decor-container) {
+    position: relative;
+    z-index: 25;
+}
+
+
+/* --- Responsive Styles --- */
+
+/* Small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .about-container {
+        padding: 2rem 0;
     }
 
-    .card-image, .card-text {
+    .book-swiper {
         width: 100%;
     }
-    .card-text p {
-        font-size: 0.9rem;
-        font-weight: 200;
-        letter-spacing: 0.5px;
+
+    .book-page {
+        padding: 1.5rem 2rem;
+        min-height: 70vh;
     }
-    .card-title {
+
+    .main-heading {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .book-title {
+        font-size: 1rem;
+    }
+
+    .book-subtitle {
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+    }
+
+    .book-text {
+        font-size: 1rem;
         margin-bottom: 1rem;
+    }
+
+    .drop-cap {
+        font-size: 3.5rem;
+    }
+
+    .corner-decor-container {
+        width: 120px;
+        height: 120px;
+    }
+
+    .corner-decor-container .flower-1,
+    .corner-decor-container .flower-2,
+    .corner-decor-container .flower-3,
+    .corner-decor-container .flower-4,
+    .corner-decor-container .flower-5 {
+        transform: scale(0.8);
+    }
+}
+
+/* Medium devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .book-page {
+        padding: 2rem 3rem;
+    }
+
+    .main-heading {
+        font-size: 2.3rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .book-title {
+        font-size: 1.1rem;
+    }
+
+    .book-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .book-text {
+        font-size: 1.2rem;
+    }
+
+    .drop-cap {
+        font-size: 4rem;
+    }
+
+    .corner-decor-container {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Tablets and small desktops (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .book-page {
+        padding: 2.5rem 3rem;
+    }
+
+    .main-heading {
+        font-size: 2.5rem;
+    }
+
+    .book-title {
+        font-size: 1.2rem;
+    }
+
+    .book-subtitle {
+        font-size: 1.7rem;
+    }
+
+    .book-text {
         font-size: 1.3rem;
+    }
+
+    .drop-cap {
+        font-size: 4.5rem;
+    }
+
+    .corner-decor-container {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* Large desktops (1025px and above) */
+@media (min-width: 1025px) {
+    .book-page {
+        padding: 2.5rem 3.5rem;
+    }
+
+    .main-heading {
+        font-size: 2.8rem;
+    }
+
+    .book-title {
+        font-size: 1.2rem;
+    }
+
+    .book-subtitle {
+        font-size: 1.8rem;
+    }
+
+    .book-text {
+        font-size: 1.35rem;
+    }
+
+    .drop-cap {
+        font-size: 5rem;
+    }
+
+    .corner-decor-container {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* Ultra-wide screens (1600px and above) */
+@media (min-width: 1600px) {
+    .book-page {
+        padding: 3rem 4rem;
+    }
+
+    .main-heading {
+        font-size: 3.2rem;
+    }
+
+    .book-subtitle {
+        font-size: 2rem;
+    }
+
+    .book-text {
+        font-size: 1.45rem;
+    }
+
+    .drop-cap {
+        font-size: 5.5rem;
+    }
+
+    .corner-decor-container {
+        width: 220px;
+        height: 220px;
     }
 }
