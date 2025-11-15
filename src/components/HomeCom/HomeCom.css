@@ -1,0 +1,145 @@
+/* --- Header Component Styles --- */
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: var(--backround-color); /* Lightest color for minimalist look */
+    width: 100%;
+    min-height: 100vh; /* FIX: Set to full viewport height */
+    box-sizing: border-box;
+}
+
+.header-frame {
+    width: 90%;
+    max-width: 700px;
+    background: none; /* Removed background */
+    border: none; /* Removed thick border */
+    box-shadow: none; /* Removed shadow */
+    padding: 1rem 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ornate-top-border, .ornate-bottom-border {
+    display: none; /* Removed ornate borders */
+}
+
+.masthead-content {
+    text-align: center;
+    font-family: "Old Standard TT", serif; /* Changed to cleaner font for all text */
+    color: var(--color-title);
+    position: relative;
+    z-index: 10;
+}
+
+.masthead-rubric {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1rem;
+    color: var(--color-2-dark); /* Subtle color */
+    margin-bottom: 0.25rem;
+    text-transform: none; /* Simpler case */
+    letter-spacing: 0.1em;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.masthead-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 4rem; /* Larger font for impact */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: none;
+    color: var(--color-title);
+    letter-spacing: -0.05em;
+}
+
+.masthead-subtitle {
+    font-size: 1.2rem;
+    font-style: normal;
+    color: var(--color-2);
+    margin-bottom: 3rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-1-dark); /* Subtle underline */
+    display: inline-block;
+}
+
+.photo-plinth {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.photo-placeholder {
+    width: 300px;
+    height: 300px;
+    border: 1px solid var(--color-2-dark); /* Thin, clean border */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: url("../../../public/Header.HEIC") center center/cover no-repeat;
+
+}
+/* Mini phones (up to 320px) */
+@media (max-width: 320px) {
+    .header-container {
+        justify-content: flex-start;
+        padding-top: 1rem;
+    }
+    .masthead-title { font-size: 2rem; }
+    .masthead-rubric { font-size: 0.9rem; }
+    .masthead-subtitle { font-size: 1rem; }
+    .photo-placeholder { width: 180px; height: 180px; }
+}
+
+/* Small phones (321px to 480px) */
+@media (min-width: 321px) and (max-width: 480px) {
+    .header-container { justify-content: flex-start; padding-top: 1rem; }
+    .masthead-title { font-size: 2.5rem; }
+    .masthead-rubric { font-size: 1rem; }
+    .masthead-subtitle { font-size: 1.1rem; }
+    .photo-placeholder { width: 200px; height: 200px; }
+}
+
+/* Medium phones (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .header-container { justify-content: flex-start; padding-top: 1rem; }
+    .masthead-title { font-size: 3rem; }
+    .masthead-rubric { font-size: 1.1rem; }
+    .masthead-subtitle { font-size: 1.2rem; }
+    .photo-placeholder { width: 250px; height: 250px; }
+}
+
+/* Tablets (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header-container { justify-content: center; padding-top: 1rem; }
+    .masthead-title { font-size: 4.5rem; }
+    .masthead-rubric { font-size: 1.3rem; }
+    .masthead-subtitle { font-size: 1.5rem; }
+    .photo-placeholder { width: 300px; height: 300px; }
+}
+
+/* Laptops / Small desktops (1025px to 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .header-container { justify-content: center; padding-top: 1rem; }
+    .masthead-title { font-size: 5.5rem; }
+    .masthead-rubric { font-size: 1.4rem; }
+    .masthead-subtitle { font-size: 1.7rem; }
+    .photo-placeholder { width: 350px; height: 350px; }
+}
+
+/* Large screens / iPhone 14 Pro Max, big desktops (1441px and up) */
+@media (min-width: 1441px) {
+    .header-container { justify-content: flex-start; }
+    .masthead-title { font-size: 6rem; }
+    .masthead-rubric { font-size: 1.5rem; }
+    .masthead-subtitle { font-size: 2rem; }
+    .photo-placeholder { width: 400px; height: 400px; }
+}

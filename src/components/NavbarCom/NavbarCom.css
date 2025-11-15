@@ -29,11 +29,11 @@
 .container {
     width: 100%;
     position: fixed;
-    background: var();
+    background: var(--backround-color);
     top: 0;
     z-index: 10;
     margin: auto;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 .nav {
@@ -41,7 +41,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 0;
+    padding: 20px 0;
     width: 95%;
     margin: auto;
 }
@@ -70,7 +70,7 @@
 
 .nav-link {
     text-decoration: none;
-    color: var(--color-1-dark);
+    color: var(--color-2-dark);
     font-size: 1.17rem;
     transition: color 0.3s;
     font-family: 'Cormorant Garamond', serif !important;
