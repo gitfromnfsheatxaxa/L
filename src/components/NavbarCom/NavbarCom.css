@@ -28,7 +28,7 @@
 
 .container {
     width: 100%;
-    position: fixed;
+    position: absolute;
     background: var(--backround-color);
     top: 0;
     z-index: 10;

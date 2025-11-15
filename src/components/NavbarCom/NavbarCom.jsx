@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { faAlignJustify, faAlignRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './NavbarCom.css'; // Import the CSS file
+import './NavbarCom.css';
 import Logo from '/public/LL.png';
+
 const NavbarCom = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -11,13 +12,16 @@ const NavbarCom = () => {
         setMobileMenuOpen(!mobileMenuOpen);
     };
 
-    // Function to close the mobile menu
     const closeMobileMenu = () => {
         setMobileMenuOpen(false);
     };
 
+
+
     return (
-        <header className="header-nav">
+        <header
+            className="header-nav"
+        >
             <div className="dark-cyan-background" />
             <div className="container">
                 <nav className="nav">
@@ -39,7 +43,6 @@ const NavbarCom = () => {
                         </li>
                     </ul>
                     <div className="nav-actions">
-
                         <button
                             className="toggle-mobile-button"
                             onClick={handleToggleMobileMenu}
@@ -51,7 +54,6 @@ const NavbarCom = () => {
                                 <FontAwesomeIcon className="burger" icon={faAlignJustify}/>
                             )}
                         </button>
-
                     </div>
                 </nav>
             </div>
